@@ -28,16 +28,5 @@
     "FLASK_ENV": "production",
     "STREAMLIT_ENV": "production",
     "PYTHONUNBUFFERED": "1"
-  },
-  "functions": {
-    "st_app/backend/app.py": {
-      "runtime": "python3.12"
-    },
-    "st_app/frontend/0_🏠_Home.py": {
-      "runtime": "python3.12"
-    },
-    "wst_app/app/run.py": {
-      "runtime": "python3.12"
-    }
   }
 }
