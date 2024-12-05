@@ -1,0 +1,43 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "st_app/backend/app.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "st_app/frontend/0_🏠_Home.py",
+      "use": "@vercel/python"
+    },
+    {
+      "src": "wst_app/app/run.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "st_app/backend/app.py"
+    },
+    {
+      "src": "/streamlit/(.*)",
+      "dest": "st_app/frontend/0_🏠_Home.py"
+    }
+  ],
+  "env": {
+    "FLASK_ENV": "production",
+    "STREAMLIT_ENV": "production",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "functions": {
+    "st_app/backend/app.py": {
+      "runtime": "python3.12"
+    },
+    "st_app/frontend/0_🏠_Home.py": {
+      "runtime": "python3.12"
+    },
+    "wst_app/app/run.py": {
+      "runtime": "python3.12"
+    }
+  }
+}
