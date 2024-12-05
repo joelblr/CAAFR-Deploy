@@ -52,7 +52,9 @@ if __name__ == '__main__':
     caafr_llm = LLM.CAAFR_LLM(env_mgr.get_env_key("LLM_API_KEY"))
     RFV_Main.install_packages()
 
-    PORT = int(env_mgr.get_env_key("BACKEND_PORT"))
+    PORT = os.environ.get("PORT", int(env_mgr.get_env_key("BACKEND_PORT")))
     print(f"Back-end Server running @http://localhost:{PORT}")
-    from werkzeug.serving import run_simple
-    run_simple('localhost', PORT, app)
+    app.run(debug=False, host="0.0.0.0", port=PORT)
+
+    # from werkzeug.serving import run_simple
+    # run_simple('localhost', PORT, app)
