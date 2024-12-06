@@ -1,6 +1,3 @@
 [build]
 command = "streamlit run st_app/frontend/0_🏠_Home.py"
 publish = "."
-
-[build.environment]
-PYTHON_VERSION = "3.9"
