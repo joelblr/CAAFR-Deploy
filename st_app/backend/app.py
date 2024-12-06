@@ -54,7 +54,8 @@ if __name__ == '__main__':
 
     PORT = os.environ.get("PORT", int(env_mgr.get_env_key("BACKEND_PORT")))
     print(f"Back-end Server running @http://localhost:{PORT}")
-    app.run(debug=False, host="0.0.0.0", port=PORT)
+    # app.run(debug=False, host="0.0.0.0", port=PORT)
+    # app.run(debug=True, port=PORT)
 
-    # from werkzeug.serving import run_simple
-    # run_simple('localhost', PORT, app)
+    from werkzeug.serving import run_simple
+    run_simple('localhost', PORT, app)
