@@ -30,6 +30,10 @@ cd ../
 # Clear the terminal (Git Bash)
 clear
 
+python -q
+import nltk
+nltk.download('vader_lexicon')
+exit()
 # Start the backend in the background
 # source ./venv/Scripts/activate
 python st_app/backend/app.py &

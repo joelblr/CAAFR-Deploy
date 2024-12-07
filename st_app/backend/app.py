@@ -50,7 +50,7 @@ if __name__ == '__main__':
     # Initialize Dot-Env Manager
     env_mgr = EnvManager(".env")
     caafr_llm = LLM.CAAFR_LLM(env_mgr.get_env_key("LLM_API_KEY"))
-    RFV_Main.install_packages()
+    # RFV_Main.install_packages()
 
     PORT = os.environ.get("PORT", int(env_mgr.get_env_key("BACKEND_PORT")))
     print(f"Back-end Server running @http://localhost:{PORT}")
