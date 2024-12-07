@@ -32,14 +32,15 @@ clear
 
 # python
 # import nltk
-# nltk.downloader.download('vader_lexicon')
-# exit()
+# nltk.download("vader_lexicon")
+# nltk.downloader.download("vader_lexicon")
+
 # Start the backend in the background
 # source ./venv/Scripts/activate
 python st_app/backend/app.py &
 
 # Start the frontend
 # source ./venv/Scripts/activate
-streamlit run st_app/frontend/0_🏠_Home.py --server.enableCORS=false --server.port=8501
+streamlit run st_app/frontend/0_🏠_Home.py --server.enableCORS=false --server.address=0.0.0.0 --server.port=8501
 
 # chmod +x setup.sh && bash setup.sh
