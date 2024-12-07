@@ -1,6 +1,5 @@
 [build]
-command = "python st_app/backend/app.py"
-command = "streamlit run st_app/frontend/0_🏠_Home.py"
+command = "python st_app/backend/app.py & streamlit run st_app/frontend/0_🏠_Home.py"
 publish = "."
 
 [server]
