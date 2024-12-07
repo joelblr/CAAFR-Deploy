@@ -30,7 +30,7 @@ cd ../
 # Clear the terminal (Git Bash)
 clear
 
-python -q
+python
 import nltk
 nltk.downloader.download('vader_lexicon')
 exit()
