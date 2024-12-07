@@ -36,4 +36,4 @@ python st_app/backend/app.py &
 
 # Start the frontend
 # source ./venv/Scripts/activate
-streamlit run st_app/frontend/0_🏠_Home.py
+streamlit run st_app/frontend/0_🏠_Home.py --server.enableCORS=false --server.address=0.0.0.0 --server.port=8501
