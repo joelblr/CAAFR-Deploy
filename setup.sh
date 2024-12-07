@@ -32,7 +32,8 @@ clear
 
 python -q
 import nltk
-nltk.download('vader_lexicon')
+# nltk.download('vader_lexicon')
+nltk.downloader.download('vader_lexicon')
 exit()
 # Start the backend in the background
 # source ./venv/Scripts/activate
